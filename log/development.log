@@ -1153,3 +1153,2447 @@ Migrating to CreatePosts (20210125100919)
   [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('7209158273134045305')[0m
   [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2021-02-15 12:36:34 +0900
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2261)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: 889f36a5f397d778316a
+Version: webpack 4.46.0
+Time: 1553ms
+Built at: 2021/02/15 12:36:38
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-13be95389e24a544bf98.js    125 KiB  application  [emitted] [immutable]  application
+js/application-13be95389e24a544bf98.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-13be95389e24a544bf98.js js/application-13be95389e24a544bf98.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 403 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 3955ms (Views: 3941.9ms | ActiveRecord: 5.9ms | Allocations: 1508601)
+
+
+Started POST "/posts" for ::1 at 2021-02-15 12:37:37 +0900
+Processing by PostsController#create as JS
+  Parameters: {"authenticity_token"=>"DeeDaZtcaEIwesKUVu/izoWkfLeh5kW/S9KkrAU4D60RSWtgOSEwC0QKPnR2dx3kgZSLWMbhIToSBIEtaFgxJA==", "content"=>"絶対にプログラマになれます！", "commit"=>"投稿する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `created_at`, `updated_at`) VALUES ('絶対にプログラマになれます！', '2021-02-15 03:37:37.905493', '2021-02-15 03:37:37.905493')[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 200 OK in 12ms (ActiveRecord: 4.4ms | Allocations: 6542)
+
+
+Started GET "/" for ::1 at 2021-02-15 12:37:37 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1399)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 7085)
+
+
+Started POST "/posts" for ::1 at 2021-02-15 12:38:55 +0900
+Processing by PostsController#create as JS
+  Parameters: {"authenticity_token"=>"RvHIYGN9oZedNAf7kkUtg7ujZ2I81eqoR1NR7BTe76utM0Yp3tkyqcr78I6ZWVUNftCriGvljzBcC9nfr8AC+w==", "content"=>"", "commit"=>"投稿する"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `created_at`, `updated_at`) VALUES ('', '2021-02-15 03:38:55.965342', '2021-02-15 03:38:55.965342')[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 200 OK in 8ms (ActiveRecord: 1.5ms | Allocations: 2807)
+
+
+Started GET "/" for ::1 at 2021-02-15 12:38:55 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 7108)
+
+
+Started POST "/posts" for ::1 at 2021-02-15 12:42:12 +0900
+Processing by PostsController#create as JS
+  Parameters: {"authenticity_token"=>"paBRx4/i9T6cPT69/HGY99L0/+9b8rdJYkMwf/OUiVROYt+OMkZmAMvyycj3beB5F4czBQzC0tF5G7hMSIpkBA==", "content"=>"", "commit"=>"投稿する"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `created_at`, `updated_at`) VALUES ('', '2021-02-15 03:42:12.812965', '2021-02-15 03:42:12.812965')[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 1.7ms | Allocations: 2813)
+
+
+Started GET "/" for ::1 at 2021-02-15 12:42:12 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1703)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms | Allocations: 8315)
+
+
+Started POST "/posts" for ::1 at 2021-02-15 12:42:17 +0900
+Processing by PostsController#create as JS
+  Parameters: {"authenticity_token"=>"Z0NWBluQPP2tY7v5zJWC4mNJD26bWMihi+CFejVd72iMgdhP5jSvw/qsTIzHifpspjrDhMxorTmQuA1JjkMCOA==", "content"=>"再チャレンジです(1回目)", "commit"=>"投稿する"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `created_at`, `updated_at`) VALUES ('再チャレンジです(1回目)', '2021-02-15 03:42:17.806088', '2021-02-15 03:42:17.806088')[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 200 OK in 8ms (ActiveRecord: 1.4ms | Allocations: 2794)
+
+
+Started GET "/" for ::1 at 2021-02-15 12:42:17 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 7152)
+
+
+Started GET "/" for ::1 at 2021-02-15 12:44:25 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1461)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: 889f36a5f397d778316a
+Version: webpack 4.46.0
+Time: 669ms
+Built at: 2021/02/15 12:44:27
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-13be95389e24a544bf98.js    125 KiB  application  [emitted] [immutable]  application
+js/application-13be95389e24a544bf98.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-13be95389e24a544bf98.js js/application-13be95389e24a544bf98.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 403 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1834ms (Views: 1832.8ms | ActiveRecord: 0.4ms | Allocations: 25589)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 12:44:28 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+Started GET "/posts/3" for ::1 at 2021-02-15 12:44:29 +0900
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"3"}
+Started GET "/posts/2" for ::1 at 2021-02-15 12:44:30 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"2"}
+Started GET "/posts/4" for ::1 at 2021-02-15 12:44:48 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+Started GET "/posts/2" for ::1 at 2021-02-15 12:44:51 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (1.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 03:48:29.229940' WHERE `posts`.`id` = 2[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 218190ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 1897612)
+
+
+Started GET "/" for ::1 at 2021-02-15 12:48:29 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1464)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: d210189442e4f20d5f68
+Version: webpack 4.46.0
+Time: 719ms
+Built at: 2021/02/15 12:48:31
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-49e7b8852d6dc2092290.js    125 KiB  application  [emitted] [immutable]  application
+js/application-49e7b8852d6dc2092290.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-49e7b8852d6dc2092290.js js/application-49e7b8852d6dc2092290.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 403 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1882ms (Views: 1881.4ms | ActiveRecord: 0.3ms | Allocations: 17324)
+
+
+Started GET "/" for ::1 at 2021-02-15 12:48:31 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 7159)
+
+
+Started GET "/" for ::1 at 2021-02-15 12:48:31 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 13043)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 12:48:35 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 03:49:05.178838' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 29400ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 267191)
+
+
+Started GET "/" for ::1 at 2021-02-15 14:58:29 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1466)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: e91d69f2068a4b840820
+Version: webpack 4.46.0
+Time: 774ms
+Built at: 2021/02/15 14:58:31
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9b18abaacf4282a7603e.js    125 KiB  application  [emitted] [immutable]  application
+js/application-9b18abaacf4282a7603e.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9b18abaacf4282a7603e.js js/application-9b18abaacf4282a7603e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 838 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1978ms (Views: 1977.0ms | ActiveRecord: 0.4ms | Allocations: 28868)
+
+
+Started GET "/posts/3" for ::1 at 2021-02-15 14:58:33 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:01:00.892885' WHERE `posts`.`id` = 3[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 146947ms (Views: 0.7ms | ActiveRecord: 3.0ms | Allocations: 1275141)
+
+
+Started GET "/posts/1" for ::1 at 2021-02-15 15:01:00 +0900
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:01:26.255630' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8197578ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 18752350)
+
+
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:40:54.406408' WHERE `posts`.`id` = 2[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 10584212ms (Views: 0.5ms | ActiveRecord: 2.3ms | Allocations: 25648896)
+
+
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:40:57.968113' WHERE `posts`.`id` = 3[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 10588790ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 25706723)
+
+
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.7ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:41:00.247463' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 10592200ms (Views: 0.4ms | ActiveRecord: 3.4ms | Allocations: 25758460)
+
+
+Started GET "/posts/3" for ::1 at 2021-02-15 15:41:00 +0900
+Started GET "/posts/1" for ::1 at 2021-02-15 15:41:00 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:41:00.333919' WHERE `posts`.`id` = 1[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 5.7ms | Allocations: 8226)
+
+
+Processing by PostsController#checked as */*
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"3"}
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[36mPost Load (4.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[36mPost Update (1.1ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:41:00.400129' WHERE `posts`.`id` = 3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:41:00.402923' WHERE `posts`.`id` = 1[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 6.9ms | Allocations: 11279)
+
+
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 11753)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:41:08 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 5266)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: 244f9018e3856cf3bfd7
+Version: webpack 4.46.0
+Time: 698ms
+Built at: 2021/02/15 15:41:11
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0d1dce019b611dabaa7f.js    125 KiB  application  [emitted] [immutable]  application
+js/application-0d1dce019b611dabaa7f.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0d1dce019b611dabaa7f.js js/application-0d1dce019b611dabaa7f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 864 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 2988ms (Views: 2980.2ms | ActiveRecord: 2.4ms | Allocations: 1506556)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:41:35 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1484)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: e5c0a55a6c25d49ff560
+Version: webpack 4.46.0
+Time: 693ms
+Built at: 2021/02/15 15:41:37
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-40b16bdf991b802d26d9.js    125 KiB  application  [emitted] [immutable]  application
+js/application-40b16bdf991b802d26d9.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-40b16bdf991b802d26d9.js js/application-40b16bdf991b802d26d9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 867 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1817ms (Views: 1816.0ms | ActiveRecord: 0.4ms | Allocations: 23262)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:41:44 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1483)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 7227)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:41:45 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1482)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 7214)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:42:08 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1473)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: 244f9018e3856cf3bfd7
+Version: webpack 4.46.0
+Time: 569ms
+Built at: 2021/02/15 15:42:10
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0d1dce019b611dabaa7f.js    125 KiB  application  [emitted] [immutable]  application
+js/application-0d1dce019b611dabaa7f.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0d1dce019b611dabaa7f.js js/application-0d1dce019b611dabaa7f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 864 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1667ms (Views: 1666.2ms | ActiveRecord: 0.3ms | Allocations: 25278)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:45:23 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1473)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: d76a35ac8d6a36b064e7
+Version: webpack 4.46.0
+Time: 697ms
+Built at: 2021/02/15 15:45:25
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2470eb11fd11487a43f3.js    126 KiB  application  [emitted] [immutable]  application
+js/application-2470eb11fd11487a43f3.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2470eb11fd11487a43f3.js js/application-2470eb11fd11487a43f3.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 991 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1798ms (Views: 1796.8ms | ActiveRecord: 0.5ms | Allocations: 25644)
+
+
+Started GET "/posts/2" for ::1 at 2021-02-15 15:45:26 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:26.238739' WHERE `posts`.`id` = 2[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 2.6ms | Allocations: 6397)
+
+
+Started GET "/posts/1" for ::1 at 2021-02-15 15:45:27 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:27.162122' WHERE `posts`.`id` = 1[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 4073)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:45:38 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1473)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: 4cd13df2ae0102ca7a71
+Version: webpack 4.46.0
+Time: 692ms
+Built at: 2021/02/15 15:45:40
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-20baefbf593001773e39.js    126 KiB  application  [emitted] [immutable]  application
+js/application-20baefbf593001773e39.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-20baefbf593001773e39.js js/application-20baefbf593001773e39.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 997 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1836ms (Views: 1834.9ms | ActiveRecord: 0.4ms | Allocations: 25653)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:41 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:41.181337' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 2.9ms | Allocations: 4070)
+
+
+Started GET "/posts/3" for ::1 at 2021-02-15 15:45:42 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.6ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:42.138903' WHERE `posts`.`id` = 3[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 4070)
+
+
+Started GET "/posts/3" for ::1 at 2021-02-15 15:45:42 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:42.155619' WHERE `posts`.`id` = 3[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4068)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:42 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:42.616678' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 2.7ms | Allocations: 4060)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:42 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:42.634273' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 4063)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:42 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:42.670068' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 4060)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:43 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:43.418625' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 4060)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:43 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:43.434700' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 4060)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:43 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:43.447596' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 4060)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:43 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:43.458284' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 4060)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:44 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:44.236536' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 2.3ms | Allocations: 4057)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:44 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:44.252074' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:44 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:44.264924' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:44 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:44.275761' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:44 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:44.286098' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:45 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:45.508902' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 4072)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:45 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:45.523947' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 4072)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:45 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:45.537121' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 4072)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:45 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:45.547823' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4072)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:45 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:45.557168' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 4072)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:45 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:45.566251' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 4072)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:46 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:46.739207' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 4082)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:46 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:46.754125' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 4082)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:46 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:46.766632' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 4082)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:46 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:46.776283' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 4082)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:46 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:46.785596' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4082)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:46 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:46.794283' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4082)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:46 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:46.802616' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 4082)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:48 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:48.060194' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 3.2ms | Allocations: 4058)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:48 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:48.076642' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4058)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:48 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:48.088414' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 4058)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:48 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:48.099003' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4058)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:48 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:48.108279' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 4058)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:48 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:48.117014' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4058)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:48 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:45:48.125791' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4058)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:45:48 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:45:48.150824' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 4059)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.6ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.008031' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.7ms | Allocations: 4055)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.025251' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.037276' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.048251' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.057523' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.068356' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.078311' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.087982' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 4055)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.097890' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (1.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.108032' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.118200' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.128181' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.136681' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.146750' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.156565' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 6920)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.168237' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.177285' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.188338' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.197882' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.207446' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.217073' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4054)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.226565' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.235599' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.244708' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.253950' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.264275' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.273950' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.283563' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.293293' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.302978' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.313159' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.321943' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.332174' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:15.341224' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:15 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:15.351524' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4050)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:16 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:16.991059' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 4067)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.009668' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.022588' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.033557' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.042914' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.053707' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.063216' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.072365' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.083056' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.092597' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4067)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.102401' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.112104' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.120871' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.132125' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.142127' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.151905' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.162699' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.171612' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.183216' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 7486)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.193452' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.202632' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.211924' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4066)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.220582' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.230369' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.240842' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.250334' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.260583' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.269973' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.280707' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.290080' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.299371' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.309295' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.317829' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.327800' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.336571' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:17.347271' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:17 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:17.356770' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 4059)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:46:26 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1473)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matsuura/projects/ajax_app/public/packs
+[Webpacker] Hash: d76a35ac8d6a36b064e7
+Version: webpack 4.46.0
+Time: 569ms
+Built at: 2021/02/15 15:46:28
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2470eb11fd11487a43f3.js    126 KiB  application  [emitted] [immutable]  application
+js/application-2470eb11fd11487a43f3.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2470eb11fd11487a43f3.js js/application-2470eb11fd11487a43f3.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/checked.js] 991 bytes {application} [built]
+[./app/javascript/memo.js] 0 bytes {application} [built]
+[./app/javascript/packs/application.js] 794 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1744ms (Views: 1743.0ms | ActiveRecord: 0.3ms | Allocations: 23237)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:30 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:46:30.698830' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 4056)
+
+
+Started GET "/posts/4" for ::1 at 2021-02-15 15:46:32 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:46:32.673968' WHERE `posts`.`id` = 4[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 2.7ms | Allocations: 4068)
+
+
+Started POST "/posts" for ::1 at 2021-02-15 15:50:52 +0900
+Processing by PostsController#create as JS
+  Parameters: {"authenticity_token"=>"sNjHs0dCsNiMjEFtcRrN82KXQJO/z3+zN5JDRYL0+Zusdi+65T/okfj8vY1RgjLZZqe3fNjIGzZuRGbE75THEg==", "content"=>"AjaaaaaaX!!", "commit"=>"投稿する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `created_at`, `updated_at`) VALUES ('AjaaaaaaX!!', '2021-02-15 06:50:52.373661', '2021-02-15 06:50:52.373661')[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 200 OK in 6ms (ActiveRecord: 1.1ms | Allocations: 3158)
+
+
+Started GET "/" for ::1 at 2021-02-15 15:50:52 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1497)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 7221)
+
+
+Started GET "/posts/5" for ::1 at 2021-02-15 15:50:53 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = TRUE, `posts`.`updated_at` = '2021-02-15 06:50:53.775635' WHERE `posts`.`id` = 5[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 2.8ms | Allocations: 4056)
+
+
+Started GET "/posts/2" for ::1 at 2021-02-15 15:50:55 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:50:55.629371' WHERE `posts`.`id` = 2[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 4068)
+
+
+Started GET "/posts/5" for ::1 at 2021-02-15 15:50:56 +0900
+Processing by PostsController#checked as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13:in `checked'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE `posts` SET `posts`.`checked` = FALSE, `posts`.`updated_at` = '2021-02-15 06:50:56.737013' WHERE `posts`.`id` = 5[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `checked'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:20:in `checked'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 4064)
+
+
